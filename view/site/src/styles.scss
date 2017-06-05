@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+.main_page {
+    padding: 30px 15px;
+    text-align: center;
+    md-card {
+        background-color: rgba(95, 128, 146, .1);
+        text-align: center;
+        margin-top: 40px;
+        display: inline-block;
+        width: 500px;
+        md-card-header {
+            flex-direction: column;
+        }
+        md-card-subtitle {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            font-size: 10px;
+        }
+        .description {
+            font-size: 12px;
+            color: rgba(0, 0, 0, .54);
+        }
+    }
+}

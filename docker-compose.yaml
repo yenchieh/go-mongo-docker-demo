@@ -1,0 +1,16 @@
+version: '2'
+services:
+  mongo_project:
+    build: ./app
+    image: jack08300/mongo_project
+    ports:
+      - 1232:1232
+    links:
+      - mongodb
+    restart: always
+    container_name: mongo_project
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017
+      - DB_NAME=mongo_project
+  mongodb:
+    image: "mongo"

@@ -1,0 +1,41 @@
+<div class="main_page">
+    <md-input-container>
+        <input mdInput [(ngModel)]="name" placeholder="Name" type="email" />
+    </md-input-container>
+    <md-input-container>
+        <input mdInput [(ngModel)]="favious" placeholder="What you like" type="text" />
+    </md-input-container>
+
+    <button md-raised-button (click)="submit()">Enter</button>
+
+
+    <div *ngFor="let card of cards">
+        <md-card>
+            <md-card-header>
+                <md-card-subtitle>
+                    {{card.id}}
+                </md-card-subtitle>
+                <md-card-title>
+                    <div>
+                        <span class="description">
+                            Date Added:
+                        </span>
+                        <span>{{card.dateAdded | date: 'MM/dd/yyyy hh:mm:ss' }}</span>
+                    </div>
+                    <div>
+                        <span class="description">
+                        Name:
+                        </span>
+                        <span>{{card.name}}</span>
+                    </div>
+                </md-card-title>
+            </md-card-header>
+            <md-card-content>
+                <p>
+                    {{card.favorite}}
+                </p>
+            </md-card-content>
+        </md-card>
+    </div>
+
+</div>
